@@ -85,6 +85,19 @@ public class SpacecraftController {
         else if (direction == 'E') direction = 'S';
         else if (direction == 'W') direction = 'N';
     }
+    
+    public void rotateUp() {
+        if ((direction == 'N') || (direction == 'S')) {
+            direction = 'U';
+        }
+    }
+
+    public void rotateDown() {
+        if ((direction == 'N') || (direction == 'S')) {
+            direction = 'D';
+        }
+    }
+
 
 
 	public static void main(String[] args) {
