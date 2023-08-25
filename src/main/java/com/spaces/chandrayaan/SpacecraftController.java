@@ -56,6 +56,15 @@ public class SpacecraftController {
 
 
 	public static void main(String[] args) {
+        int startX = 0, startY = 0, startZ = 0;
+        char startDirection = 'N';
+        char[] commands = {'f', 'r', 'u', 'b', 'l'};
+
+        SpacecraftController spacecraft = new SpacecraftController(startX, startY, startZ, startDirection);
+
+    }
 
 	}
+	
+
 }
