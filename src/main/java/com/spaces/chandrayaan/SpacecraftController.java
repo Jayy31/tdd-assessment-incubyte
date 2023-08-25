@@ -141,7 +141,8 @@ public class SpacecraftController {
         char[] commands = {'f', 'r', 'u', 'b', 'l'};
 
         SpacecraftController spacecraft = new SpacecraftController(startX, startY, startZ, startDirection);
-        
+        spacecraft.executeCommands(commands);
+        spacecraft.printFinalPosition();
     }
 
 	}
