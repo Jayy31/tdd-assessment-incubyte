@@ -54,6 +54,31 @@ public class SpacecraftController {
 		this.direction = direction;
 	}
 	
+    public void move(char command) {
+        switch (command) {
+            case 'f':
+                moveForward();
+                break;
+            case 'b':
+                moveBackward();
+                break;
+            case 'l':
+                turnLeft();
+                break;
+            case 'r':
+                turnRight();
+                break;
+            case 'u':
+            	rotateUp();
+                break;
+            case 'd':
+            	rotateDown();
+                break;
+        }
+    }
+
+	
+	
     private void moveForward() {
         if (direction == 'N') y++;
         else if (direction == 'S') y--;
@@ -102,8 +127,6 @@ public class SpacecraftController {
         System.out.println("Final Position: (" + x + ", " + y + ", " + z + ")");
         System.out.println("Final Direction: " + direction);
     }
-
-
 
 
 	public static void main(String[] args) {
