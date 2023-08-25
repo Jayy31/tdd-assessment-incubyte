@@ -97,6 +97,12 @@ public class SpacecraftController {
             direction = 'D';
         }
     }
+    
+    public void printFinalPosition() {
+        System.out.println("Final Position: (" + x + ", " + y + ", " + z + ")");
+        System.out.println("Final Direction: " + direction);
+    }
+
 
 
 
