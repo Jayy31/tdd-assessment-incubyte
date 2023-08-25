@@ -76,6 +76,12 @@ public class SpacecraftController {
                 break;
         }
     }
+    
+    public void executeCommands(char[] commands) {
+        for (char command : commands) {
+            move(command);
+        }
+    }
 
 	
 	
