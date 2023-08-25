@@ -56,5 +56,47 @@ public class SpacecraftControllerTest {
         spacecraft.move('f');
         assertEquals(-1, spacecraft.getZ());
     }
+    
+    @Test
+    void testMoveBackwardNorth() {
+        SpacecraftController spacecraft = new SpacecraftController(0, 1, 0, 'N');
+        spacecraft.move('b');
+        assertEquals(0, spacecraft.getY());
+    }
+
+    @Test
+    void testMoveBackwardSouth() {
+        SpacecraftController spacecraft = new SpacecraftController(0, -1, 0, 'S');
+        spacecraft.move('b');
+        assertEquals(0, spacecraft.getY());
+    }
+
+    @Test
+    void testMoveBackwardEast() {
+        SpacecraftController spacecraft = new SpacecraftController(1, 0, 0, 'E');
+        spacecraft.move('b');
+        assertEquals(0, spacecraft.getX());
+    }
+
+    @Test
+    void testMoveBackwardWest() {
+        SpacecraftController spacecraft = new SpacecraftController(-1, 0, 0, 'W');
+        spacecraft.move('b');
+        assertEquals(0, spacecraft.getX());
+    }
+
+    @Test
+    void testMoveBackwardUp() {
+        SpacecraftController spacecraft = new SpacecraftController(0, 0, 1, 'U');
+        spacecraft.move('b');
+        assertEquals(0, spacecraft.getZ());
+    }
+
+    @Test
+    void testMoveBackwardDown() {
+        SpacecraftController spacecraft = new SpacecraftController(0, 0, -1, 'D');
+        spacecraft.move('b');
+        assertEquals(0, spacecraft.getZ());
+    }
 
 }
