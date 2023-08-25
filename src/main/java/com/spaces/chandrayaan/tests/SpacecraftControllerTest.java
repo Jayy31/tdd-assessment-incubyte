@@ -112,5 +112,19 @@ public class SpacecraftControllerTest {
         spacecraft.move('r');
         assertEquals('E', spacecraft.getDirection());
     }
+    
+    @Test
+    void testRotateUp() {
+        SpacecraftController spacecraft = new SpacecraftController(0, 0, 0, 'N');
+        spacecraft.move('u');
+        assertEquals('U', spacecraft.getDirection());
+    }
+
+    @Test
+    void testRotateDown() {
+        SpacecraftController spacecraft = new SpacecraftController(0, 0, 0, 'N');
+        spacecraft.move('d');
+        assertEquals('D', spacecraft.getDirection());
+    }
 
 }
