@@ -85,7 +85,7 @@ public class SpacecraftController {
 
 	
 	
-    private void moveForward() {
+    public void moveForward() {
         if (direction == 'N') y++;
         else if (direction == 'S') y--;
         else if (direction == 'E') x++;
@@ -94,7 +94,7 @@ public class SpacecraftController {
         else if (direction == 'D') z--;
     }
     
-    private void moveBackward() {
+    public void moveBackward() {
         if (direction == 'N') y--;
         else if (direction == 'S') y++;
         else if (direction == 'E') x--;
@@ -103,14 +103,14 @@ public class SpacecraftController {
         else if (direction == 'D') z++;
     }
     
-    private void turnLeft() {
+    public void turnLeft() {
         if (direction == 'N') direction = 'W';
         else if (direction == 'S') direction = 'E';
         else if (direction == 'E') direction = 'N';
         else if (direction == 'W') direction = 'S';
     }
 
-    private void turnRight() {
+    public void turnRight() {
         if (direction == 'N') direction = 'E';
         else if (direction == 'S') direction = 'W';
         else if (direction == 'E') direction = 'S';
