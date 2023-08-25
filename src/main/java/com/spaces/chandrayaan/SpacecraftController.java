@@ -71,6 +71,21 @@ public class SpacecraftController {
         else if (direction == 'U') z--;
         else if (direction == 'D') z++;
     }
+    
+    private void turnLeft() {
+        if (direction == 'N') direction = 'W';
+        else if (direction == 'S') direction = 'E';
+        else if (direction == 'E') direction = 'N';
+        else if (direction == 'W') direction = 'S';
+    }
+
+    private void turnRight() {
+        if (direction == 'N') direction = 'E';
+        else if (direction == 'S') direction = 'W';
+        else if (direction == 'E') direction = 'S';
+        else if (direction == 'W') direction = 'N';
+    }
+
 
 	public static void main(String[] args) {
         int startX = 0, startY = 0, startZ = 0;
